@@ -8,7 +8,6 @@
     "airdrop": "ts-node ./airdrop.ts",
     "transfer": "ts-node ./transfer.ts",
     "enroll": "ts-node ./enroll.ts",
-    "base58-to-bytes": "ts-node ./base58-to-bytes.ts"
   },
   "dependencies": {
     "@project-serum/anchor": "^0.26.0",
