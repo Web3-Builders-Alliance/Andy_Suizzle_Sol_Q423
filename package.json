@@ -11,7 +11,11 @@
     "base58-to-bytes": "ts-node ./base58-to-bytes.ts"
   },
   "dependencies": {
+    "@metaplex-foundation/umi": "^0.8.10",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.8.10",
+    "@metaplex-foundation/umi-uploader-bundlr": "^0.8.10",
     "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.3.9",
     "@solana/web3.js": "^1.87.6",
     "@types/node": "^20.9.0",
     "bigint-buffer": "^1.1.5",
