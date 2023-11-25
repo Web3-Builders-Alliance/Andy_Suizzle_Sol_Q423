@@ -409,6 +409,18 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@metaplex-foundation/mpl-token-metadata@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-token-metadata/-/mpl-token-metadata-3.1.1.tgz#bdc73bda746e268b2c68e5872691941e227f1d1f"
+  integrity sha512-jhS/M9jCcHRWj37mxkI/cwRS50o2K1HT49gKVxHrlVb9hjGAbB4apXA3MuTJ/x73UuqUX59v76QPL+stVQynpw==
+  dependencies:
+    "@metaplex-foundation/mpl-toolbox" "^0.9.0"
+
+"@metaplex-foundation/mpl-toolbox@^0.9.0":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@metaplex-foundation/mpl-toolbox/-/mpl-toolbox-0.9.1.tgz#a4dfcf61fbfc2a02dec49437aa3102c79f3281bd"
+  integrity sha512-Jm98H997MrDfKItjA8bxfsQa+ijVVR6YmMapSd0l75+nKo6Ca0eve/tv2z4qudMS2A4HbH6NLKSW3JHkutzvkQ==
+
 "@metaplex-foundation/umi-bundle-defaults@^0.8.10":
   version "0.8.10"
   resolved "https://registry.yarnpkg.com/@metaplex-foundation/umi-bundle-defaults/-/umi-bundle-defaults-0.8.10.tgz#f4bdf252f784ca590d208f684dc0a5839901a8ef"

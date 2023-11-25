@@ -17,7 +17,7 @@ umi.use(signerIdentity(signer));
         // Follow this JSON structure
         // https://docs.metaplex.com/programs/token-metadata/changelog/v1.0#json-structure
 
-        const image: string = "https://arweave.net/W3OIA6WT-Ya8q6JEvTYgrJuQXBQuEdJPELcc-3eqUxM"
+        const image: string = "https://arweave.net/rYiLbJ7mLLP4BHSPUNhTTSDRkLkQdHBCsssFnsQ_Zio"
 
         const metadata = {
             name: "Generug",

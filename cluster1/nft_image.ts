@@ -8,15 +8,15 @@ import { readFile } from "fs/promises";
 const umi = createUmi('https://api.devnet.solana.com');
 const bundlrUploader = createBundlrUploader(umi);
 
-let keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
-const signer = createSignerFromKeypair(umi, keypair);
-
-umi.use(signerIdentity(signer));
-
 (async () => {
+    let keypair = await umi.eddsa.createKeypairFromSecretKey(new Uint8Array(wallet));
+    console.log(`${keypair.publicKey}`);
+    const signer = createSignerFromKeypair(umi, keypair);
+    umi.use(signerIdentity(signer));
+
     try {
-        const content = await readFile("./generug.png")
-        const image = createGenericFile(content, "generug.png")
+        const content = await readFile("./cluster1/generug.png")
+        const image = createGenericFile(content, "generug.png", {contentType:"image/png"})
 
         const [myUri] = await bundlrUploader.upload([image]);
         console.log("Your image URI: ", myUri);

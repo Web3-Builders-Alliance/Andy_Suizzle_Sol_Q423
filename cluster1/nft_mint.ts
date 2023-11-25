@@ -23,7 +23,7 @@ const mint = generateSigner(umi);
             authority: umi.identity,
             name: "Generug",
             symbol: "GRUG",
-            uri: "https://arweave.net/H_H2TCLh-exqlM43viSv1c8uxM_3rpjpmyA9hvMeriw",
+            uri: "https://arweave.net/rYiLbJ7mLLP4BHSPUNhTTSDRkLkQdHBCsssFnsQ_Zio",
             sellerFeeBasisPoints: percentAmount(0),
         })
 

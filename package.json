@@ -8,9 +8,13 @@
     "airdrop": "ts-node ./airdrop.ts",
     "transfer": "ts-node ./transfer.ts",
     "enroll": "ts-node ./enroll.ts",
-    "base58-to-bytes": "ts-node ./base58-to-bytes.ts"
+    "base58-to-bytes": "ts-node ./base58-to-bytes.ts",
+    "nft_image": "ts-node ./cluster1/nft_image.ts",
+    "nft_metadata": "ts-node ./cluster1/nft_metadata.ts",
+    "nft_mint": "ts-node ./cluster1/nft_mint.ts"
   },
   "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "^3.1.1",
     "@metaplex-foundation/umi": "^0.8.10",
     "@metaplex-foundation/umi-bundle-defaults": "^0.8.10",
     "@metaplex-foundation/umi-uploader-bundlr": "^0.8.10",
