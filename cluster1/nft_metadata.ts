@@ -23,9 +23,20 @@ umi.use(signerIdentity(signer));
             name: "Generug",
             symbol: "GRUG",
             description: "Rare exotic rug",
-            image: image,
+            image,
             attributes: [
-                {trait_type: '?', value: '?'}
+                {
+                    "trait_type": "Base Color", 
+                    "value": "Purple"
+                },
+                {
+                    "trait_type": "maincolor",
+                    "value": "Purple"
+                },
+                {
+                    "trait_type": "highlights",
+                    "value": "Multicolor"
+                }
             ],
             properties: {
                 files: [
@@ -35,11 +46,16 @@ umi.use(signerIdentity(signer));
                     },
                 ]
             },
-            creators: []
+            creators: [
+                {
+                "address": keypair.publicKey,
+                "share": 100
+                }
+            ]
         };
 
         const myUri = await bundlrUploader.uploadJson(metadata)
-        console.log("Your image URI: ", myUri);
+        console.log("Your Metadata URI: ", myUri);
     }
     catch(error) {
         console.log("Oops.. Something went wrong", error);

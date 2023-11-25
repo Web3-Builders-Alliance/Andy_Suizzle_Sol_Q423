@@ -19,12 +19,11 @@ const mint = generateSigner(umi);
     let tx = createNft(
         umi,
         {
-            mint: mint,
-            authority: umi.identity,
+            mint,
             name: "Generug",
             symbol: "GRUG",
-            uri: "https://arweave.net/rYiLbJ7mLLP4BHSPUNhTTSDRkLkQdHBCsssFnsQ_Zio",
-            sellerFeeBasisPoints: percentAmount(0),
+            uri: "https://arweave.net/UBdCujmF8ZiBLP41KCnHEmdFbbmNq4cEhbVhbGGUu0g",
+            sellerFeeBasisPoints: percentAmount(1),
         })
 
     let result = await tx.sendAndConfirm(umi);
