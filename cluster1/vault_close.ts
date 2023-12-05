@@ -30,25 +30,27 @@ const provider = new AnchorProvider(connection, new Wallet(keypair), {
 });
 
 // Create our program
-const program = new Program<WbaVault>(IDL, "<address>" as Address, provider);
+const program = new Program<WbaVault>(IDL, "D51uEDHLbWAxNfodfQDv7qkp8WZtxrhi3uganGbNos7o" as Address, provider);
+
+// Vault state
+const vaultState = new PublicKey("8maCFMojcM3gMn2xk3gbG2YkNegciMNvfnqBbNE4WpgE");
 
 // Create a random keypair
-const vaultState = new PublicKey("<address>");
-
-// Create a random keypair
-// const closeVaultState = ???
-
+const closeVaultState = new PublicKey("8maCFMojcM3gMn2xk3gbG2YkNegciMNvfnqBbNE4WpgE");
 (async () => {
   try {
-    // const signature = await program.methods
-    // .closeAccount()
-    // .accounts({
-    //     ???
-    // })
-    // .signers([
-    //     keypair
-    // ]).rpc();
-    // console.log(`Close success! Check out your TX here:\n\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`);
+    const signature = await program.methods
+    .closeAccount()
+    .accounts({
+      owner: keypair.publicKey,
+      closeVaultState: closeVaultState,
+      vaultState: vaultState,
+      systemProgram: SystemProgram.programId
+    })
+    .signers([
+        keypair
+    ]).rpc();
+    console.log(`Close success! Check out your TX here:\n\nhttps://explorer.solana.com/tx/${signature}?cluster=devnet`);
   } catch (e) {
     console.error(`Oops, something went wrong: ${e}`);
   }
