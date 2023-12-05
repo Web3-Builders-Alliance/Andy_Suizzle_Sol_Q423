@@ -9,7 +9,7 @@ import {
 import { createSignerFromKeypair, signerIdentity, publicKey } from "@metaplex-foundation/umi";
 
 // Define our Mint address
-const mint = publicKey("9xXa31Mnqxsnhd27uz4UTyrztzHA2f15bqb2dJ3puPhD")
+const mint = publicKey("9R69N8GnLkbo76q3oVM5xPMi5Spkz7hmKAvpZMpd7t2h")
 
 // Create a UMI connection
 const umi = createUmi('https://api.devnet.solana.com');

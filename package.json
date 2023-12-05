@@ -9,6 +9,9 @@
     "transfer": "ts-node ./transfer.ts",
     "enroll": "ts-node ./enroll.ts",
     "base58-to-bytes": "ts-node ./base58-to-bytes.ts",
+    "spl_init": "ts-node ./cluster1/spl_init.ts",
+    "spl_mint": "ts-node ./cluster1/spl_mint.ts",
+    "spl_metadata": "ts-node ./cluster1/spl_metadata.ts",
     "nft_image": "ts-node ./cluster1/nft_image.ts",
     "nft_metadata": "ts-node ./cluster1/nft_metadata.ts",
     "nft_mint": "ts-node ./cluster1/nft_mint.ts"
