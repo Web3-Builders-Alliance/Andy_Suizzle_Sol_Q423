@@ -58,7 +58,7 @@ const mint = new PublicKey("9R69N8GnLkbo76q3oVM5xPMi5Spkz7hmKAvpZMpd7t2h");
     //const ownerAta="61QVv2DAVUgSrjyGMDa93kGhjhoU8LtLarChKyeoAUf1";
     const ownerAta = await getOrCreateAssociatedTokenAccount(connection, keypair, mint, keypair.publicKey);
     
-    // Get the token account of the fromWallet address, and if it does not exist, create it
+    // Get the token account of the toWallet address, and if it does not exist, create it
     const vaultAta = await getOrCreateAssociatedTokenAccount(
         connection, keypair, mint, vaultAuth, true, commitment
     );
