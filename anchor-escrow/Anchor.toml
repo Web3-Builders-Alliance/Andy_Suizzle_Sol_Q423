@@ -11,7 +11,7 @@ anchor_escrow = "8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "/home/lyte/.config/solana/id.json"
 
 [scripts]

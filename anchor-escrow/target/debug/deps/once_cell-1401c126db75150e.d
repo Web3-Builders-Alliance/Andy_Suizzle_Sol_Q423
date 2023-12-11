@@ -1,0 +1,9 @@
+/home/lyte/Andy_Suizzle_Sol_Q423/anchor-escrow/target/debug/deps/once_cell-1401c126db75150e.rmeta: /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/lib.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/imp_std.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/race.rs
+
+/home/lyte/Andy_Suizzle_Sol_Q423/anchor-escrow/target/debug/deps/libonce_cell-1401c126db75150e.rlib: /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/lib.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/imp_std.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/race.rs
+
+/home/lyte/Andy_Suizzle_Sol_Q423/anchor-escrow/target/debug/deps/once_cell-1401c126db75150e.d: /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/lib.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/imp_std.rs /home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/race.rs
+
+/home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/lib.rs:
+/home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/imp_std.rs:
+/home/lyte/.cargo/registry/src/index.crates.io-6f17d22bba15001f/once_cell-1.18.0/src/race.rs:

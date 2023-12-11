@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "./anchor-escrow/programs/anchor-escrow/Cargo.toml"
+  ]
+}
