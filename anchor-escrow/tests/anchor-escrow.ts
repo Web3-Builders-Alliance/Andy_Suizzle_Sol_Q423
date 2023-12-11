@@ -4,8 +4,7 @@ import { AnchorEscrow } from "../target/types/anchor_escrow";
 import { Keypair, LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from "@solana/web3.js";
 import { MINT_SIZE, TOKEN_PROGRAM_ID, createAssociatedTokenAccountIdempotentInstruction, createInitializeMint2Instruction, createMintToInstruction, getAssociatedTokenAddress, getAssociatedTokenAddressSync, getMinimumBalanceForRentExemptAccount, getMinimumBalanceForRentExemptMint, getOrCreateAssociatedTokenAccount } from "@solana/spl-token";
 import { randomBytes } from "crypto";
-
-import wallet from "../../wba-wallet.json";
+import { ASSOCIATED_PROGRAM_ID } from "@coral-xyz/anchor/dist/cjs/utils/token";
 
 describe("anchor-escrow", () => {
   // Configure the client to use the local cluster.
@@ -33,8 +32,8 @@ describe("anchor-escrow", () => {
 
   const seed = new BN(randomBytes(8));
 
-  const maker = Keypair.fromSecretKey(new Uint8Array(wallet));
-  const taker = Keypair.fromSecretKey(new Uint8Array(wallet));
+  const maker = Keypair.generate();
+  const taker = Keypair.generate();
   const mintA = Keypair.generate();
   const mintB = Keypair.generate();
   const makerAtaA = getAssociatedTokenAddressSync(mintA.publicKey, maker.publicKey);
@@ -58,7 +57,7 @@ describe("anchor-escrow", () => {
     ])
   })
 
-  it("Make", async () => {
+  it("Mint", async () => {
     let tx = new Transaction();
     const lamports = await getMinimumBalanceForRentExemptMint(connection);
       tx.instructions = [
@@ -117,5 +116,80 @@ describe("anchor-escrow", () => {
     await provider.sendAndConfirm(tx, [
       mintA, mintB, maker, taker
     ]).then(log);
-})
+  });
+
+  it("Make", async () => {
+    await program.methods.make(
+      seed, 
+      new BN(1e6),
+      new BN(1e6)
+    )
+    .accounts(
+      {
+        maker: maker.publicKey,
+        mintA: mintA.publicKey,
+        mintB: mintB.publicKey,
+        makerAtaA,
+        escrow,
+        vault,
+        associatedTokenProgram: ASSOCIATED_PROGRAM_ID,
+        tokenProgram: TOKEN_PROGRAM_ID,
+        systemProgram: SystemProgram.programId
+      }
+    )
+    .signers([ maker ])
+    .rpc()
+    .then(confirm)
+    .then(log)
+  });
+
+  
+  
+  it("Refund", async () => {
+    await program.methods.refund()
+    .accounts(
+      {
+        maker: maker.publicKey,
+        mintA: mintA.publicKey,
+        makerAtaA,
+        escrow,
+        vault,
+        associatedTokenProgram: ASSOCIATED_PROGRAM_ID,
+        tokenProgram: TOKEN_PROGRAM_ID,
+        systemProgram: SystemProgram.programId
+      }
+    )
+    .signers([ maker ])
+    .rpc()
+    .then(confirm)
+    .then(log)
+  });
+
+  
+  it("Take", async () => {
+    await program.methods.take()
+    .accounts(
+      {
+        taker: taker.publicKey,
+        maker: maker.publicKey,
+        mintA: mintA.publicKey,
+        mintB: mintB.publicKey,
+        takerAtaA,
+        takerAtaB,
+        makerAtaB,
+        escrow,
+        vault,
+        associatedTokenProgram: ASSOCIATED_PROGRAM_ID,
+        tokenProgram: TOKEN_PROGRAM_ID,
+        systemProgram: SystemProgram.programId
+      }
+    )
+    .signers([ maker ])
+    .rpc()
+    .then(confirm)
+    .then(log)
+  })
+
+
+
 });

@@ -1,1 +1,28 @@
 Streaming transaction logs mentioning 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF. Confirmed commitment
+Transaction executed in slot 264630833:
+  Signature: 38GHTrjpqUcvYg64DhEonChiYeMr6cbLP8XVsFHzrJQfU8h5Kj2ABwzmv4WHnvN9vzaqiDgMix4U5vRsgAy8eTnt
+  Status: Error processing Instruction 0: custom program error: 0xbc4
+  Log Messages:
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF invoke [1]
+    Program log: Instruction: Make
+    Program log: AnchorError caused by account: mint_a. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF consumed 5426 of 200000 compute units
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF failed: custom program error: 0xbc4
+Transaction executed in slot 264630834:
+  Signature: foQQ2NvEiVEetEVUdMnzHn3odh2K1PS6aMSXvGv6qzu8C3r8kkM9PZhkHb4iYk7F215qQ5jd6ppGNP8vjoAVpDB
+  Status: Error processing Instruction 0: custom program error: 0xbc4
+  Log Messages:
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF invoke [1]
+    Program log: Instruction: Refund
+    Program log: AnchorError caused by account: mint_a. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF consumed 5117 of 200000 compute units
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF failed: custom program error: 0xbc4
+Transaction executed in slot 264630834:
+  Signature: 2p9DEkeqmH2txa6DeD2gGrA4dvPF289vhhUUM22inyfgnMJCNkso6iS1zS7iGaeJv6X7dtS9kRc9j4vdJp4Bebk1
+  Status: Error processing Instruction 0: custom program error: 0xbc4
+  Log Messages:
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF invoke [1]
+    Program log: Instruction: Make
+    Program log: AnchorError caused by account: mint_a. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF consumed 5426 of 200000 compute units
+    Program 8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF failed: custom program error: 0xbc4
