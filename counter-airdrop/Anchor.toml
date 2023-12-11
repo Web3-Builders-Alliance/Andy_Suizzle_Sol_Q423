@@ -11,7 +11,7 @@ counter_airdrop = "7pmvFUXLvHyDb37LGJbBDsQgUCvarj3cx4qxM49Gdxfq"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "devnet"
 wallet = "/home/lyte/.config/solana/id.json"
 
 [scripts]

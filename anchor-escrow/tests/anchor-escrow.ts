@@ -6,6 +6,10 @@ import { MINT_SIZE, TOKEN_PROGRAM_ID, createAssociatedTokenAccountIdempotentInst
 import { randomBytes } from "crypto";
 import { ASSOCIATED_PROGRAM_ID } from "@coral-xyz/anchor/dist/cjs/utils/token";
 
+import makerWallet from "../../wba-wallet.json";
+import takerWallet from "../../taker-wallet.json";
+
+
 describe("anchor-escrow", () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
@@ -32,8 +36,8 @@ describe("anchor-escrow", () => {
 
   const seed = new BN(randomBytes(8));
 
-  const maker = Keypair.generate();
-  const taker = Keypair.generate();
+  const maker = Keypair.fromSecretKey(new Uint8Array(makerWallet));
+  const taker = Keypair.fromSecretKey(new Uint8Array(takerWallet));
   const mintA = Keypair.generate();
   const mintB = Keypair.generate();
   const makerAtaA = getAssociatedTokenAddressSync(mintA.publicKey, maker.publicKey);
