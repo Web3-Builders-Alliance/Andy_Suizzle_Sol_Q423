@@ -14,13 +14,13 @@ pub struct Take<'info> {
       init_if_needed,
       payer = taker,
       associated_token::mint = mint_a,
-      associated_token::authority = maker
+      associated_token::authority = taker
   )]
   taker_ata_a: Account<'info, TokenAccount>,
   #[account(
     mut,
-    associated_token::mint = mint_a,
-    associated_token::authority = maker
+    associated_token::mint = mint_b,
+    associated_token::authority = taker
   )]
   taker_ata_b: Account<'info, TokenAccount>,
   #[account(

@@ -1,0 +1,16 @@
+[2023-12-11T20:30:25.659043997Z INFO  solana_test_validator] solana-validator 1.17.7 (src:fca44b78; feat:3073089885, client:SolanaLabs)
+[2023-12-11T20:30:25.661064097Z INFO  solana_test_validator] Starting validator with: ArgsOs {
+        inner: [
+            "solana-test-validator",
+            "--ledger",
+            ".anchor/test-ledger",
+            "--mint",
+            "8qVLurV4CVnTwwjAbw7GRD1aGqE46fEF8P1jCef3PZmw",
+            "--bpf-program",
+            "8LfvCPX67gZ8hfz93BqG4T6PmGrADjCKixTxtUXG2QmF",
+            "/home/lyte/Andy_Suizzle_Sol_Q423/anchor-escrow/target/deploy/anchor_escrow.so",
+        ],
+    }
+[2023-12-11T20:30:25.662023897Z WARN  solana_perf] CUDA is disabled
+[2023-12-11T20:30:25.662067997Z INFO  solana_perf] AVX detected
+[2023-12-11T20:30:25.662082997Z ERROR solana_perf] Incompatible CPU detected: missing AVX2 support. Please build from source on the target
